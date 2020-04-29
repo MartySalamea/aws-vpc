@@ -6,16 +6,18 @@ Resources:
         CidrBlock: 10.0.0.0/16
         EnableDnsSupport: true
   ## Private Subnet
-  igwName:
-    Type: AWS::EC2::InternetGateway
-    Properties:
-      Tags:
-        - Key: keyname
-          Value: value
-  AttachGateway:
-    Type: AWS::EC2::VPCGatewayAttachment
-    Properties:
+
+  Subnet:
+      Type: AWS::EC2::Subnet
+      Properties: 
+      AssignIpv6AddressOnCreation: Boolean
+      AvailabilityZone: String
+      CidrBlock: String
+      Ipv6CidrBlock: String
+      MapPublicIpOnLaunch: Boolean
+      Tags: 
+        - Tag
       VpcId: myVPC
-      InternetGatewayId: !Ref igwName
+
       
 
