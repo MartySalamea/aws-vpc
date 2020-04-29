@@ -46,11 +46,11 @@ Resources:
       Tags:
       - Key: Name
         Value: Private
-  PublicRoute1:   # Private route table has direct routing to IGW:
+  PrivateRoute1:   # Private route table has direct routing to IGW:
     Type: AWS::EC2::Route
     DependsOn: AttachGateway
     Properties:
       RouteTableId: !Ref PrivateRouteTable
       DestinationCidrBlock: 0.0.0.0/0
-      GatewayId: !Ref InternetGatew 
+      GatewayId: !Ref InternetGateway
   # The end
