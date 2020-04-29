@@ -52,5 +52,5 @@ Resources:
     Properties:
       RouteTableId: !Ref PrivateRouteTable
       DestinationCidrBlock: 0.0.0.0/0
-      GatewayId: !Ref InternetGateway 
+      GatewayId: !Ref InternetGatew 
   # The end
