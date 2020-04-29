@@ -9,7 +9,7 @@ Resources:
   subnetName:
     Type: AWS::EC2::Subnet
     Properties:
-      AvailabilityZone: us-east-2a
+      AvailabilityZone: us-east-2
       VpcId: !Ref myVPC
       CidrBlock: 10.0.0.0/24
 
