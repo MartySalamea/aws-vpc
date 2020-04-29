@@ -12,11 +12,4 @@ Resources:
       AvailabilityZone: us-east-2a
       VpcId: !Ref myVPC
       CidrBlock: 10.0.0.0/24
-    ## Second Subnet  
-  subnetName:
-    Type: AWS::EC2::Subnet
-    Properties:
-      AvailabilityZone: us-east-2a
-      VpcId: !Ref myVPC
-      CidrBlock: 10.0.1.0/24
-      
+    
