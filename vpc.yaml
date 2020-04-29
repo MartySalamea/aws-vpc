@@ -1,18 +1,11 @@
 Resources:
-    ## VPC
-  myVPC:
-      Type: AWS::EC2::VPC
-      Properties:
-        CidrBlock: 10.0.0.0/16
-        EnableDnsSupport: true
-  ## Private Subnet
-
-  Subnet:
-      Type: AWS::EC2::Subnet
-      Properties:
-      CidrBlock: 10.0.0.0/24
-      Ipv6CidrBlock: String
-      VpcId: myVPC
-
-      
-
+  # First, a VPC:
+  VPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 10.1.0.0/16
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+      Tags:
+      - Key: Name
+        Value:  !Join ['', [!Ref "AWS::StackName", "-VPC" ]]
